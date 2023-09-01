@@ -1,8 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-  id "org.sonarqube" version "3.4.0.2513"
-}
-
 buildscript {
   repositories {
     jcenter()
@@ -23,10 +19,14 @@ allprojects {
   }
 }
 
+plugins {
+  id "org.sonarqube" version "3.4.0.2513"
+}
+
 sonarqube {
   properties {
     property "sonar.projectKey", "assessmentapp"
     property "sonar.organization", "org"
-    property "sonar.host.url", "65.0.56.223:9000"
+    property "sonar.host.url", "http://65.0.56.223:9000"
   }
 }
