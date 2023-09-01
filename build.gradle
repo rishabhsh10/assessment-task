@@ -19,3 +19,15 @@ allprojects {
     google()
   }
 }
+
+plugins {
+  id "org.sonarqube" version "3.4.0.2513"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "assessmentapp"
+    property "sonar.organization", "org"
+    property "sonar.host.url", "65.0.56.223:9000"
+  }
+}
